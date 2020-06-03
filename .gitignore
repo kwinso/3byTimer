@@ -1,0 +1,8 @@
+package.json
+node_modules/
+.idea/
+public/
+assets/
+builds/
+dist/
+tsconfig.tsbuildinfo
