@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css">
+    <link rel="stylesheet" href="attempt.css">
+    <title>Attempt</title>
+</head>
+<body>
+    <h1 class="message title is-5" id="message"></h1>
+    <h1 class="scramble title is-5 info" id="scrambleField"></h1>
+    <h1 class='time title is-3' id="timeField"></h1>
+    <div class="buttons action-button">
+        <button class="button is-medium is-danger" id="deleteButton">Delete</button>
+    </div>
+    <script>
+        require('../../publicScripts/attempt.js');
+        let exports = {};
+    </script>
+</body>
+</html>

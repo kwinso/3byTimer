@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>SpeedCubing Timer </title>
+<body>
+    <div class="timer-container">
+        <div class="timer-section">
+            <div class="timer-info">
+                <div class="scramble-info">
+                    <h1 class="title is-4 info">Scramble:</h1>
+                    <h1 class="title is-5 scramble" id="scrambleField">Generating scramble...</h1>
+                </div>
+                <div class="discipline-info">
+                    <h1 class="title info is-6">Discipline:</h1>
+                    <h1 class="title is-1 discipline-name" id="discipline">3x3</h1>
+                    <div  class="buttons are-small">
+                        <button class="button are-small" id="changeDisciplineButton">change</button>
+                    </div>
+                </div>
+            </div>
+            <div class="timer">
+                <div class="time">
+                    <div class="time-wrapper" id="timeWrapper">
+                        <h1 class="time-result" id="timerField">0.00</h1>
+                    </div>
+                    <div class="tip">
+                        <span class="tag is-info is-medium" id="changeModeButton">Press space</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="results">
+            <h3 class="title is-1 info" ><span class="tap-icon"></span><span id="resultsTitle">Current</span></h3>
+            <div class="average-results">
+                <h3 class="avg-result title is-5">Avg 5: <span class="result-num" id="avgFive">0.00</span></h3>
+                <h3 class="avg-result title is-5">Avg 12: <span class="result-num" id="avgTwelve">0.00</span></h3>
+                <h3 class="avg-result title is-5">Avg 50: <span class="result-num" id="avgFifty">0.00</span></h3>
+                <h3 class="avg-result title is-5">Avg 100: <span class="result-num" id="avgHundred">0.00</span></h3>
+            </div>
+            <h4 class="title is-2 info">Attempts:</h4>
+            <h6 class="title is-5" id="attemptsCount">0 attempts</h6>
+            <div class="attempts" id="attemptsField">
+            </div>
+            <button class="button is-danger is-normal" id="resetSession">Reset Session</button>
+        </div>
+
+    </div>
+    <script>
+        require("../../publicScripts/index.js");
+        let exports = {};
+    </script>
+</body>
+</html>

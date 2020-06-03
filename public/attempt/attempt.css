@@ -1,0 +1,36 @@
+body {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+    margin: auto;
+}
+
+:root {
+    --info-color: #276b9a;
+    --red-color: #ef4668;
+    --green-color: #48c573
+}
+
+.info {
+    color: var(--info-color);
+}
+
+.worst {
+    color: var(--red-color);
+}
+
+.best {
+    color: var(--green-color);
+}
+
+.action-button {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
