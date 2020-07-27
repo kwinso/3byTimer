@@ -22,7 +22,7 @@ function createMainWindow() {
     });
     
     if (PRODUCTION)
-        infoWin.setMenu(null);
+        mainWin.setMenu(null);
     
     mainWin.loadFile(path.join(__dirname, "./public/mainPage/index.html"));
 
