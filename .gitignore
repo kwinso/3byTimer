@@ -1,7 +1,5 @@
-package.json
 node_modules/
-.idea/
 assets/
-builds/
+build/
 dist/
 tsconfig.tsbuildinfo

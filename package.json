@@ -1,0 +1,58 @@
+{
+  "name": "3bytimer",
+  "version": "1.0.0",
+  "description": "Simple speedcubing timer for 3x3",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc && cp -r public dist",
+    "dev": "npm run build && electron .",
+    "dist": "electron-builder "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uwumouse/3byTimer.git"
+  },
+  "keywords": [
+    "timer",
+    "electron",
+    "speedcubing"
+  ],
+  "author": "Under Mouse <pythonisajoke@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uwumouse/3byTimer/issues"
+  },
+  "homepage": "https://github.com/uwumouse/3byTimer#readme",
+  "devDependencies": {
+    "electron": "^9.1.1",
+    "electron-builder": "^22.7.0",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@types/electron-store": "^3.2.0",
+    "electron-store": "^6.0.0"
+  },
+  "build": {
+    "productName": "3byTimer",
+    "files": [
+      "**/*",
+      "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+      "!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}",
+      "!**/node_modules/*.d.ts",
+      "!**/node_modules/.bin",
+      "!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}",
+      "!.editorconfig",
+      "!**/._*",
+      "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,.gitignore,.gitattributes}",
+      "!**/{__pycache__,thumbs.db,.flowconfig,.idea,.vs,.nyc_output}",
+      "!**/{appveyor.yml,.travis.yml,circle.yml}",
+      "!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}",
+      "!**/src",
+      "!**/gitignore",
+      "!**/tsconfig.json"
+    ],
+    "directories": {
+      "output": "build"
+    }
+  }
+}

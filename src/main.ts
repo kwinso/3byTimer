@@ -2,10 +2,10 @@ import { app, BrowserWindow, ipcMain } from "electron";
 import Store from "electron-store";
 import  * as path from "path";
 
-
-
 const sessionsStore = new Store();
 
+
+const PRODUCTION = true;
 
 let mainWin: Electron.BrowserWindow;
 let infoWin: Electron.BrowserWindow;
@@ -20,7 +20,6 @@ function createMainWindow() {
             nodeIntegration: true,
         },
     });
-    // win.maximize();
     mainWin.loadFile(path.join(__dirname, "./public/mainPage/index.html"));
 
 }
@@ -35,7 +34,10 @@ function createInfoWindow() {
             nodeIntegration: true,
         },
     });
-    // infoWin.setMenu(null);
+
+    if (PRODUCTION)
+        infoWin.setMenu(null);
+        
     infoWin.loadFile(path.join(__dirname, "./public/attempt/attempt.html"));
 
 }
@@ -71,7 +73,7 @@ ipcMain.on('attempt:delete', (event, data) => {
 
 ipcMain.on("storage:update", (event, data) => {
     const { discipline, attempts } = data;
-    let currentDisciplineStorage = sessionsStore.get(`sessions.${discipline}`);
+    let currentDisciplineStorage: any = sessionsStore.get(`sessions.${discipline}`);
 
     if (!currentDisciplineStorage) {
         sessionsStore.set(`sessions.${discipline}`, attempts);
