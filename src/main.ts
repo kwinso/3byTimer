@@ -5,7 +5,7 @@ import  * as path from "path";
 const sessionsStore = new Store();
 
 
-const PRODUCTION = true;
+const DEVELOPMENT = false;
 
 let mainWin: Electron.BrowserWindow;
 let infoWin: Electron.BrowserWindow;
@@ -20,9 +20,8 @@ function createMainWindow() {
             nodeIntegration: true,
         },
     });
-    
-    if (PRODUCTION)
-        mainWin.setMenu(null);
+    // disable menu bar depending on development
+    mainWin.setMenuBarVisibility(DEVELOPMENT);
     
     mainWin.loadFile(path.join(__dirname, "./public/mainPage/index.html"));
 
@@ -39,8 +38,8 @@ function createInfoWindow() {
         },
     });
 
-    if (PRODUCTION)
-        infoWin.setMenu(null);
+    // disable menu bar depending on development
+    infoWin.setMenuBarVisibility(DEVELOPMENT);
         
     infoWin.loadFile(path.join(__dirname, "./public/attempt/attempt.html"));
 
