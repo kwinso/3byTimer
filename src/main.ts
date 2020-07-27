@@ -20,6 +20,10 @@ function createMainWindow() {
             nodeIntegration: true,
         },
     });
+    
+    if (PRODUCTION)
+        infoWin.setMenu(null);
+    
     mainWin.loadFile(path.join(__dirname, "./public/mainPage/index.html"));
 
 }
