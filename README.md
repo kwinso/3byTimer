@@ -16,7 +16,7 @@ Application for speed solving 3x3 Rubuk's cube.
 ```
   npm run start
 ```
-## Getting ready for distribution
+## Distributing
 ```
   npm run dist
 ```
