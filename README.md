@@ -27,6 +27,6 @@ Also you cant find documentation and guildes about how to build your ElectoronJS
 ## How to use it?  
 - Start Timer - __Spacebar__
 - To stop timer press __any key(if timer is running while you're pressing)__
-- Change results mdoe (Best/Current) - __Click on the title with *hand* icon__
+- Change results mode (Best/Current) - __Click on the title with *hand* icon__
 - Reset your results - __The button "Reset Session" is waiting for you in bottom rigth corner__
-- See more info about your attempt (and delete this attempt) - __Select needed attempt in "Attempts" filed__
+- See more info about your attempt (thre you delete this attempt) - __Select needed attempt in "Attempts" filed__
