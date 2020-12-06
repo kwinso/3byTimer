@@ -21,7 +21,7 @@ Application for speed solving 3x3 Rubuk's cube.
   npm run dist
 ```
 You can configure your build as you want, but I decided to keep things simple.
-Also you cant find documentation and guildes about how to build your ElectoronJS app here: https://www.electron.build/
+Also you can find the documentation and guides about how to build your ElectoronJS app here: https://www.electron.build/
 
 
 ## How to use it?  
