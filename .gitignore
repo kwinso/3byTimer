@@ -3,3 +3,4 @@ assets/
 build/
 dist/
 tsconfig.tsbuildinfo
+package-lock.json

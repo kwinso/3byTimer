@@ -2,23 +2,24 @@
   "name": "3bytimer",
   "version": "1.0.0",
   "description": "Simple speedcubing timer for 3x3",
-  "main": "dist/main.js",
+  "main": "build/main.js",
   "scripts": {
-    "build": "tsc && cp -r public dist",
+    "build": "tsc && cp -r public build",
     "start": "electron .",
     "dev": "npm run build && electron .",
-    "dist": "electron-builder "
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --win"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uwumouse/3byTimer.git"
+    "url": "https://github.com/uwumouse/3byTimer.git"
   },
   "keywords": [
     "timer",
     "electron",
     "speedcubing"
   ],
-  "author": "Under Mouse <pythonisajoke@gmail.com>",
+  "author": "undermouse <pythonisajoke@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/uwumouse/3byTimer/issues"
@@ -34,6 +35,9 @@
     "electron-store": "^6.0.0"
   },
   "build": {
+    "win": {
+      "publisherName": "undermouse"
+    },
     "productName": "3byTimer",
     "files": [
       "**/*",
@@ -49,11 +53,13 @@
       "!**/{appveyor.yml,.travis.yml,circle.yml}",
       "!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}",
       "!**/src",
+      "!**/README.md",
       "!**/gitignore",
-      "!**/tsconfig.json"
+      "!**/tsconfig.json",
+      "build/"
     ],
     "directories": {
-      "output": "build"
+      "output": "dist"
     }
   }
 }
